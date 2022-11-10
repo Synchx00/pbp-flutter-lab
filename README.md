@@ -7,25 +7,25 @@
 
 ## *Widget* yang Digunakan
 
-1. `Text`
+1. `Text`,
     Menampilkan sebuah *string* dengan *single style*.
-2. `Icon`
+2. `Icon`,
     Menampilkan sebuah ikon.
-3. `Column`
+3. `Column`,
     Sebuah *widget* yang menampilkan *children*-nya secara vertikal.
-4. `Row`
+4. `Row`,
     Sebuah *widget* yang menampilkan *children*-nya secara horizontal.
-5. `Scaffold`
+5. `Scaffold`,
     Menerapkan dasar dari *visual layout* Material Design.
-6. `AppBar`
+6. `AppBar`,
     *App bar* dari Material Design
-7. `Padding`
+7. `Padding`,
     Memberi *padding* pada *child* yang diletakkan di dalamnya.
-8. `FloatingActionButton`
+8. `FloatingActionButton`,
     Membuat tombol yang dapat melakukan sebuah *action*
-9. `Center`
+9. `Center`,
     Sebuah *widget* yang *child*-nya akan berposisi di tengah.
-10. `Visibility`
+10. `Visibility`,
     Menampilkan *child*-nya tergantung dengan nilai *field* `visible`.
 
 ## `setState`
@@ -47,4 +47,4 @@ Method ini digunakan jika ingin melakukan perubahan pada tampilan app secara lan
 
 ## Bonus
 
-Menambahkan *property*: *visible* pada button kurang yang berguna untuk menghilangkan *button* kurang jika nilai `_counter` = 0
+Menambahkan *property*: *visible* pada button kurang yang berguna untuk menghilangkan *button* kurang jika nilai `_counter = 0`
