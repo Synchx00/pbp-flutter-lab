@@ -31,7 +31,7 @@ class _DataBudgetPageState extends State<DataBudgetPage> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const DataBudgetPage()),
+                      builder: (context) => const MyHomePage()),
                 );
               },
             ),
