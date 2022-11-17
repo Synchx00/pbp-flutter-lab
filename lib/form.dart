@@ -79,7 +79,7 @@ class _MyFormPageState extends State<MyFormPage> {
                         padding: const EdgeInsets.all(8.0),
                         child: TextFormField(
                           decoration: InputDecoration(
-                            hintText: "Contoh: Top-up ml",
+                            hintText: "Contoh: Beli Chicken Steak Masjep",
                             labelText: "Judul",
                             // Menambahkan circular border agar lebih rapi
                             border: OutlineInputBorder(
