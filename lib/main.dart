@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
+import 'form.dart';
+import 'data.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+    const MyApp({super.key});
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Program Counter'),
-    );
-  }
+    @override
+    Widget build(BuildContext context) {
+        return MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+            primarySwatch: Colors.blue,
+        ),
+        home: const MyHomePage(),
+        );
+    }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+    const MyHomePage({super.key});
 
-  final String title;
+    final String title = 'Flutter Demo Home Page';
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
+    @override
+    State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -61,6 +61,43 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+      ),
+        drawer: Drawer(
+      child: Column(
+        children: [
+          // Menambahkan clickable menu
+          ListTile(
+            title: const Text('Counter'),
+            onTap: () {
+              // Route menu ke halaman utama
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const MyHomePage()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Form'),
+            onTap: () {
+              // Route menu ke halaman form
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const MyFormPage()),
+              );
+            },
+          ),
+                    ListTile(
+            title: const Text('Data Budget'),
+            onTap: () {
+              // Route menu ke halaman form
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const DataBudgetPage()),
+              );
+            },
+          ),
+        ],
+      ),
       ),
       body: Center(
         child: Column(
