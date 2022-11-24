@@ -1,7 +1,8 @@
-import 'main.dart';
+import 'package:counter_7/main.dart';
 import 'data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:counter_7/page/my_watch_list_page.dart';
 
 class MyFormPage extends StatefulWidget {
     const MyFormPage({super.key});
@@ -27,7 +28,7 @@ class _MyFormPageState extends State<MyFormPage> {
                 title: Text('Tambah Budget'),
             ),
               // Menambahkan drawer menu
-    drawer: Drawer(
+         drawer: Drawer(
       child: Column(
         children: [
           // Menambahkan clickable menu
@@ -61,9 +62,19 @@ class _MyFormPageState extends State<MyFormPage> {
               );
             },
           ),
+                    ListTile(
+            title: const Text('My Watch List'),
+            onTap: () {
+              // Route menu ke halaman form
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const MyWatchListPage()),
+              );
+            },
+          ),
         ],
       ),
-    ),
+      ),
       body: Form(
         key: _formKey,
         child: CustomScrollView(

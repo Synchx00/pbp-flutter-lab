@@ -118,3 +118,58 @@ Menambahkan *property*: *visible* pada button kurang yang berguna untuk menghila
 * Menyimpan Data-data yang di-input ke dalam sebuah `List`
 * Menyimpan data dalam bentuk `Card`
 * Menampilkan data pada halaman Data Budget sesuai dengan yang sudah ditambahkan dengan memanfaatkan `List` yang sudah dibuat tadi
+
+# Tugas 9: Integrasi Web Service pada Flutter
+
+## 1. Pengambilan data JSON tanpa membuat model
+Pengambilan data JSON tanpa membuat model bisa saja dilakukan namun ini bukan merupakan *best practice*. Model yang digunakan untuk konversi data `JSON` berguna untuk mengurangi kemungkinan bug/kesalahan *`REQUEST`* dan *`POST`* `http` *request*.
+
+## 2. *Widget* yang digunakan
+1. `Text` 
+    Menampilkan sebuah *string* dengan *single style*.
+2. `Column`,
+    Sebuah *widget* yang menampilkan *children*-nya secara vertikal.
+3. `Scaffold`,
+    Menerapkan dasar dari *visual layout* Material Design.
+4. `AppBar`,
+    *App bar* dari Material Design
+5. `Padding`,
+    Memberi *padding* pada *child* yang diletakkan di dalamnya.
+6. `Center`,
+    Sebuah *widget* yang *child*-nya akan berposisi di tengah.
+7. `Drawer`,
+    Panel yang berdiri secara horizontal di pinggir `Scaffold` yang menampilkan tautan navigasi dalam aplikasi.
+8. `ListTile`,
+    Sebuah baris yang biasanya mengandung teks dan ikon.
+9. `Navigator`,
+    Mengelola *child widgets* menggunakan prinsip *stack*.
+10. `MaterialPageRoute`,
+    Rute modal yang menggantikan seluruh layar dengan transisi platform-adaptif.
+11. `Card`,
+    Sebuah panel yang bisa digunakan untuk menampilkan informasi di dalamnya. Memiliki *style* dimana sudutnya sedikit bulat dan terdapat bayangan elevasi.
+12. `CustomScrollView`,
+    Kurang lebih sama dengan `SingleChildScrollView` namun lebih fleksibel.
+13. `SliverFillRemainingFill`,
+    Sebuah *sliver* yang mengandung sebuah *box child* yang mengisi sisa ruang pada *viewport*.
+14. `Expanded`,
+    Melebarkan *child* dari `Row`, `Column`, atau `Flex` agar mengisi ruang yang masih tersedia.
+15. `Align`,
+    Melakukan *aligining* terhadap *child*-nya.
+16. `TextButton`,
+    Tombol yang berisi teks.
+17. `RichText`,
+    Menampilkan teks dengan beberapa *sytle* yang berbeda.
+18. `TextSpan`,
+    Sebuah retang teks yang tidak bisa diubah.
+19. `FutureBuilder`,
+    Dapat melakukan *build* terhadap dirinya sendiri berdasarkan interaksi terakhir dengan `Future`.
+20. `InkWell`,
+    Sebuah area persegi panjang yang merespon sentuhan.
+
+## 3. Mekanisme pemanggilan data dari JSON hingga ditampilkan pada Flutter
+1. *Calling* `fetchMyWatchlist`oleh `FutureBuilder`
+2.  Mengambil data `JSON` dari `http://webggniboss.herokuapp.com/mywatchlist/json/` dan dikonversi menjadi objek `MyWatchlist`.
+3. Mengembalikan data dengan `fetchMyWatchlist()` lalu *function* *`builder`* menampilkan data pada UI Flutter.
+
+## 4. Implementasi
+* Sangat mirip dengan *tutorial* 8 (95% Tugas ini mengikuti langkah-langkah *tutorial* 8)
